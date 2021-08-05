@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="../static/style.css" />
+    <title>Welcome to Cancerfree</title>
+  </head>
+  <body>
+    <a href="/"><img src="../static/small_logo.png" alt="small_logp" class="smalllogo" style="display:inline;"/></a>
+    <ul class="drop-down-menu">
+      <li><a href="#">About Us</a>
+          <ul>
+              <li><a href="\about_whoWeAre">Who We Are</a>
+              </li>
+              <li><a href="\about_whatWeDo">What We Do</a>
+              </li>
+          </ul>
+      </li>
+      <li><a href="\products">Products</a>
+        <ul>
+          <li><a href="#">Human Cells</a>
+            <ul>
+              <li><a href="#">Blood</a>
+              </li>
+              <li><a href="#">Pleural fluid</a>
+              </li>
+              <li><a href="#">Ascites</a>
+              </li>
+              <li><a href="#">Tissue</a>
+              </li>
+          </ul>
+          </li>
+      </ul>
+      </li>
+      <li><a href="#">Services</a></li>
+      <li><a href="\links">Links</a>
+      </li>
+      <li><a href="\others">Others</a>
+      </li>
+  </ul>
+  <div class="login_btn" style="display:inline;"> 
+    <ul>
+      <li><a href="/login">Log In</a></li>
+      <li><a href="/index">Sign Up</a></li>
+    </ul>
+  </div>
+  <div class="container">
+    <h1>Cell Line</h1>
+    <div class="line-green"></div>
+    <!-- <div id="BoxText1">這是 CSS box model 的測試區塊<br>橘色邊框為 5px 粗，實線，內距為 10px，外距為 15px。</div> -->
+    <br>
+    <!-- <h4>
+      {{myfilter[0]}}
+      {{myfilter[1]}}
+      {{myfilter[2]}}
+      {{myfilter[3]}}
+      {{myfilter[4]}}
+      {{myfilter[5]}}
+    </h4> -->
+    {% for cell in showupcellline: %}
+        {% if (myfilter[0] == cell[1] or myfilter[0] == 'All') and 
+              (myfilter[1] == cell[3] or myfilter[1] == 'All') and
+              (myfilter[2] == cell[4] or myfilter[2] == 'All') and
+              (myfilter[3] == cell[5] or myfilter[3] == 'All') and
+              (myfilter[4] == cell[8] or myfilter[4] == 'All') and 
+              (myfilter[5] == cell[9] or myfilter[5] == 'All') : %}
+          <div id="BoxText3">
+            <h2>{{cell[0]}}</h2>
+            <h3>Product Category: </h3><h3 style=color:#777>{{cell[1]}}</h3><br>
+            <h3>Organism: </h3><h3 style=color:#777>{{cell[2]}}</h3><br>
+            <h3>Age: </h3><h3 style=color:#777>{{cell[3]}}</h3><br>
+            <h3>Gender: </h3><h3 style=color:#777>{{cell[4]}}</h3><br>
+            <h3>Ethnicity: </h3><h3 style=color:#777>{{cell[5]}}</h3><br>
+            <h3>Biopsy site: </h3><h3 style=color:#777>{{cell[6]}}</h3><br>
+            <h3>Tissue: </h3><h3 style=color:#777>{{cell[7]}}</h3><br>
+            <h3>Cancer type: </h3><h3 style=color:#777>{{cell[8]}}</h3><br>
+            <h3>Growth properties: </h3><h3 style=color:#777>{{cell[9]}}</h3><br>
+          </div>
+          <br>
+        {% endif %}
+    {% endfor %}
+  </body>
+</html>

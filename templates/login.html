@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="../static/style.css" />
+    <title>Log in</title>
+  </head>
+  <body>
+    <a href="/"><img src="../static/small_logo.png" alt="small_logp" class="smalllogo" style="display:inline;"/></a>
+    <ul class="drop-down-menu">
+      <li><a href="#">About Us</a>
+          <ul>
+              <li><a href="\about_whoWeAre">Who We Are</a>
+              </li>
+              <li><a href="\about_whatWeDo">What We Do</a>
+              </li>
+          </ul>
+      </li>
+      <li><a href="\products">Products</a>
+        <ul>
+          <li><a href="#">Human Cells</a>
+            <ul>
+              <li><a href="#">Blood</a>
+              </li>
+              <li><a href="#">Pleural fluid</a>
+              </li>
+              <li><a href="#">Ascites</a>
+              </li>
+              <li><a href="#">Tissue</a>
+              </li>
+          </ul>
+          </li>
+      </ul>
+      </li>
+      <li><a href="#">Services</a></li>
+      <li><a href="\links">Links</a>
+      </li>
+      <li><a href="\others">Others</a>
+      </li>
+  </ul>
+  <div class="login_btn" style="display:inline;"> 
+    <ul>
+      <li><a href="/login">Log In</a></li>
+      <li><a href="/index">Sign Up</a></li>
+    </ul>
+  </div>
+    <div class="container">
+      <!-- <img src="../static/logo.png" alt="Lexus" class="logo" /> -->
+      <form action="/submit" method="POST">
+        <div class="form-group">
+          <h3>Email Address</h3>
+          <input
+            type="text"
+            name="email"
+            placeholder="Please enter your email"
+          />
+        </div>
+        <div class="form-group">
+          <h3>Password</h3>
+          <input
+            type="text"
+            name="pwd"
+            placeholder="Please enter your password"
+          />
+        </div>
+        <input type="submit" value="Log in" class="btn" />
+      </form>
+    </div>
+  </body>
+</html>
